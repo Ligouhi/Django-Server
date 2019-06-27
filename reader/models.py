@@ -24,3 +24,7 @@ class Collect(models.Model):
     ID = models.ForeignKey('User',on_delete=models.CASCADE)
     Pname = models.ForeignKey('Album',on_delete=models.CASCADE)
 
+class Note(models.Model):
+    ID = models.ForeignKey('User',on_delete=models.CASCADE)
+    Passage = models.ForeignKey('Passage',on_delete=models.CASCADE)
+    Note = models.CharField( max_length=200,null='Flase')
